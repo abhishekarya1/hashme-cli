@@ -18,7 +18,13 @@ $ py hashme.py -v hash file 		#to verify file against hash (assumed to be MD5 by
 $ py hashme.py --verify hash file
 ```
 
-## Releases
+## Executable
+Executable is generated with `pyinstaller`.
+
+```sh
+$ pyinstaller --onefile "hashme.py"
+```
+
 Checkout latest release (`.exe`) [here](https://github.com/abhishekarya1/hashme-cli/releases).
 
 ## Further
