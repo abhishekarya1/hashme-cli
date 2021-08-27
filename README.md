@@ -4,8 +4,12 @@ A simple command line utility to generate hashes and verify if your files have b
 ## Installation
 Hashme uses `argparse` and `hashlib`, both of which are included already in Python standard library. No need to install anything.
 
-## Usage
+## Usage/Examples
 File needs to be in the same directory as the utility.
+
+```sh
+$ py hashme.py [-v, --verify hash] file
+```
 
 ```sh
 $ py hashme.py file					#to generate hash, MD5 is default
@@ -15,7 +19,7 @@ $ py hashme.py --verify hash file
 ```
 
 ## Releases
-Checkout latest release (`.exe`) [here](/releases/).
+Checkout latest release (`.exe`) [here](https://github.com/abhishekarya1/hashme-cli/releases).
 
 ## Further
 - Support for other hashing algorithms (`MD2` `MD4` `MD5` `SHA1` `SHA256` `SHA384` `SHA512`)
