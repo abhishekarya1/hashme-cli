@@ -29,7 +29,7 @@ A simple command line utility to generate hashes and verify if your files have b
 ```sh
 $ hashme [-h] {cli,verifile} ...
 $ hashme cli [-h] [-a {md5,sha256}] [-v HASH] [-c] file 		#cli mode
-$ hashme verifile [-h] [-v] file 								#verifile mode
+$ hashme verifile [-h] [-v] file 			#verifile mode
 ```
 
 ```sh
