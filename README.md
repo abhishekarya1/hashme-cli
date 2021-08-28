@@ -2,18 +2,25 @@
 A simple command line utility to generate hashes and verify if your files have been tampered with.
 
 ## Installation
-Hashme uses `argparse` and `hashlib`, both of which are included already in Python standard library. No need to install anything.
+- Hashme uses `argparse` and `hashlib`, both of which are included already in Python3 standard library
+- `pyfiglet` is used for stylized description text on help
+- `pyperclip` is used to copy text to clipboard
 
 ## Modes
 - **CLI Mode**: 
 	- generates hash and display to console
 	- takes all inputs from command line
 	- ouptuts verification result to command line
+	- copies hash to clipboard if `-c` flag is present
+
+![cli_mode](https://i.imgur.com/4XgegXW.png)
 
 - **Verifile Mode**: 
 	- generates hash using _both_ (`md5` and `sha256`) algorithms and saves to `<filename>.verifile` in the current directory
 	- takes input from `<filename>.verifile` that should exist in the current directory
 	- verify against _both_ (`md5` and `sha256`) algorithms and ouptut results to console
+
+![verifile_mode](https://i.imgur.com/5g79qng.png)
 
 ## Usage/Examples
 - File(s) need to be in the same directory as the utility.
@@ -21,14 +28,17 @@ Hashme uses `argparse` and `hashlib`, both of which are included already in Pyth
 
 ```sh
 $ hashme [-h] {cli,verifile} ...
-$ hashme cli [-h] [-a {md5,sha256}] [-v HASH] file 			#cli mode
-$ hashme verifile [-h] [-v] file 					#verifile mode
+$ hashme cli [-h] [-a {md5,sha256}] [-v HASH] [-c] file 		#cli mode
+$ hashme verifile [-h] [-v] file 								#verifile mode
 ```
 
 ```sh
 #generation
-$ py hashme.py file				#to generate hash, MD5 is default
+$ py hashme.py cli file				#to generate hash, MD5 is default
 $ py hashme.py cli -a algorithm file
+
+$ py hashme.py cli -c file 			#generate hash and copy to clipboard
+$ py hashme.py cli --clipboard file
 
 # verification
 $ py hashme.py cli -v hash file		#to verify file against hash (assumed to be MD5 by default)
