@@ -2,6 +2,9 @@
 A simple command line utility to generate hashes and verify if your files have been tampered with.
 
 ## Installation
+```sh
+$ pip install -r requirements.txt
+```
 - Hashme uses `argparse` and `hashlib`, both of which are included already in Python3 standard library
 - `pyfiglet` is used for stylized description text on help
 - `pyperclip` is used to copy text to clipboard
