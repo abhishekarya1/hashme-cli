@@ -60,9 +60,18 @@ Executable is generated with `pyinstaller`.
 
 ```sh
 $ pyinstaller --onefile "hashme.py"
+
+#after pyfigment addition (fix for font not found issue)
+$ pyinstaller --onefile --add-data "venv\Lib\site-packages\pyfiglet;./pyfiglet" hashme.py
 ```
 
 Checkout latest release (`.exe`) [here](https://github.com/abhishekarya1/hashme-cli/releases).
 
 ## Further
 - Hashing entire folder recursively and generate hash file to be verified with later (like QuickSFV)
+
+## References
+- [Argparse Tutorial = YouTube](https://youtu.be/Y2Vatkp4Y6M)
+- https://docs.python.org/3/library/argparse.html
+- https://docs.python.org/3/howto/argparse.html
+- [A Simple Guide To Command Line Arguments With ArgParse - towards data science](https://towardsdatascience.com/a-simple-guide-to-command-line-arguments-with-argparse-6824c30ab1c3)
