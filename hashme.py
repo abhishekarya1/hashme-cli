@@ -89,7 +89,11 @@ def main():
 			except FileNotFoundError as e:
 				print(e)
 		else:
-			generate_verifile(args.file)
+			try:
+				generate_verifile(args.file)
+				print('Verifile generated successfully.')
+			except BaseException as e:
+				print(e)	
 
 
 #main
