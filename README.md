@@ -29,7 +29,7 @@ A simple command line utility to generate hashes and verify if your files have b
 ```sh
 $ hashme [-h] {cli,verifile} ...
 $ hashme cli [-h] [-a {md5,sha256}] [-v HASH] [-c] file 		#cli mode
-$ hashme verifile [-h] [-v] file 			#verifile mode
+$ hashme verifile [-h] [-v] file 			                #verifile mode
 ```
 
 ```sh
@@ -37,11 +37,11 @@ $ hashme verifile [-h] [-v] file 			#verifile mode
 $ py hashme.py cli file				#to generate hash, MD5 is default
 $ py hashme.py cli -a algorithm file
 
-$ py hashme.py cli -c file 			#generate hash and copy to clipboard
+$ py hashme.py cli -c file 	                #generate hash and copy to clipboard
 $ py hashme.py cli --clipboard file
 
 # verification
-$ py hashme.py cli -v hash file		#to verify file against hash (assumed to be MD5 by default)
+$ py hashme.py cli -v hash file		        #to verify file against hash (assumed to be MD5 by default)
 $ py hashme.py cli --hash hash file
 
 $ py hashme.py cli -a algorithm -v hash file		#explicitly specifying algorithm
