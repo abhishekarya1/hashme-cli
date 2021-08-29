@@ -1,6 +1,8 @@
 # hashme-cli ✔️
 A simple command line utility to generate hashes and verify if your files have been tampered with.
 
+![help](https://i.imgur.com/xsEgLxG.png)
+
 ## Installation
 ```sh
 $ pip install -r requirements.txt
@@ -71,7 +73,7 @@ Checkout latest release (`.exe`) [here](https://github.com/abhishekarya1/hashme-
 - Hashing entire folder recursively and generate hash file to be verified with later (like QuickSFV)
 
 ## References
-- [Argparse Tutorial = YouTube](https://youtu.be/Y2Vatkp4Y6M)
+- [Argparse Tutorial - YouTube](https://youtu.be/Y2Vatkp4Y6M)
 - https://docs.python.org/3/library/argparse.html
 - https://docs.python.org/3/howto/argparse.html
 - [A Simple Guide To Command Line Arguments With ArgParse - towards data science](https://towardsdatascience.com/a-simple-guide-to-command-line-arguments-with-argparse-6824c30ab1c3)
