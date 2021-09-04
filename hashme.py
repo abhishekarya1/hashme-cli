@@ -3,7 +3,7 @@ import argparse
 import pyfiglet
 import pyperclip
 
-from utils import generate_hash_sha256, verify_hash, generate_verifile, verify_file
+from utils import generate_hash_sha256, verify_hash, generate_verifile, verify_file, verify_folder, generate_folder
 from constants import MD5, SHA256, UTF8
 
 
@@ -17,6 +17,7 @@ def main():
 
 	cli = subparser.add_parser('cli')
 	verifile = subparser.add_parser('verifile')
+	verifolder = subparser.add_parser('verifolder')
 
 	cli.add_argument('file', help="file to generate hash for or verify")
 	cli.add_argument('-a',
@@ -33,6 +34,15 @@ def main():
 
 	verifile.add_argument('file', help="file to generate verifile for")
 	verifile.add_argument('-v',
+						  '--verify',
+						  action='store_true',
+						  help="toggle verify mode")
+
+	group = verifolder.add_mutually_exclusive_group()
+	group.add_argument('-p',
+						  '--path',
+						  help="path to directory")
+	group.add_argument('-v',
 						  '--verify',
 						  action='store_true',
 						  help="toggle verify mode")
@@ -69,7 +79,19 @@ def main():
 				generate_verifile(args.file)
 			except BaseException as e:
 				print(e)
-
+	elif args.command == 'verifolder':
+		if args.verify:
+			try:
+				verify_folder()
+				print("Finished checking all files.")
+			except:
+				print("Some error has occured. Please make sure you have relevant permissions to read.")	
+		else:
+			#try:
+			generate_folder(args.path)
+				#print("Verifolder with files successfully generated.")
+			#except:
+				#print("Some error has occured. Please make sure you have relevant permissions to write.")	
 
 #main
 if __name__ == '__main__':
