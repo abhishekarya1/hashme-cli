@@ -34,7 +34,7 @@ $ pip install -r requirements.txt
 
 ## Usage/Examples
 - File(s) need to be in the same directory as the utility for cli and verifile modes.
-- In folder mode, a folder named ('/verifolder`) is created inside target directory that will have `verifile.md5` for all _files_ (not folders) in directory pointed to by `path`. 
+- In folder mode, a folder named (`/verifolder`) is created inside target directory that will have `verifile.md5` for all _files_ (not folders) in directory pointed to by `path`. 
 - Two hashing algorithms are available: faster `MD5` and robust `SHA256`.
 
 ```sh
