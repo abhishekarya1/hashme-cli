@@ -1,7 +1,7 @@
 # hashme-cli ✔️
 A simple command line utility to generate hashes and verify if your files have been tampered with.
 
-![help](https://i.imgur.com/e1bugQJ.png)
+![help](https://i.imgur.com/nEuAHbi.png)
 
 ## Installation
 ```sh
