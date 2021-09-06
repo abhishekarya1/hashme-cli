@@ -1,7 +1,7 @@
 # hashme-cli ✔️
 A simple command line utility to generate hashes and verify if your files have been tampered with.
 
-![help](https://i.imgur.com/fnYDrnD.png)
+![help](https://i.imgur.com/e1bugQJ.png)
 
 ## Installation
 ```sh
@@ -17,12 +17,14 @@ $ pip install -r requirements.txt
 	- takes all inputs from command line; ouptuts verification result to command line
 	- copies hash to clipboard if `-c` flag is present
 
-![cli_mode](https://i.imgur.com/4XgegXW.png)
+![cli_mode](https://i.imgur.com/fSTY6cA.png)
 
 - **Verifile Mode**: 
 	- generates hash using _both_ (`md5` and `sha256`) algorithms and saves to `<filename>.verifile` in the current directory
 	- takes input from `<filename>.verifile` that should exist in the current directory
 	- verify against _both_ (`md5` and `sha256`) algorithms and outputs results to console
+
+![verifile_mode](https://i.imgur.com/jcHODqn.png)
 
 - **Verifolder Mode**: 
 	- generates hash for all files in a folder using `md5` algorithm and saves to `<path>/verifolder/verifile.md5` (no folders)
@@ -30,7 +32,7 @@ $ pip install -r requirements.txt
 	- takes `path` input from cli, it should be a valid path on filesystem
 	- verifies all specified files and outputs results (`OK`, `BAD`, `MISSING`) to console for each file
 
-![verifolder_mode](https://i.imgur.com/co75muO.png)
+![verifolder_mode](https://i.imgur.com/GHlZqK9.png)
 
 ## Usage/Examples
 - File(s) need to be in the same directory as the utility for cli and verifile modes.
